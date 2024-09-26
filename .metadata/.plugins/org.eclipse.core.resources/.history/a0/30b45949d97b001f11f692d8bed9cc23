@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+		<!-- 데이터베이스 연결 셋팅 -->
+	  <environments default="development">
+	    <environment id="development">
+	      <transactionManager type="JDBC"/>
+	      <dataSource type="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+	        <property name="url" value="jdbc:mysql://localhost:3306/mycomu?serverTimezone=UTC"/>
+	        <property name="username" value="root"/>
+	        <property name="password" value="z1z2z3z4"/>
+	      </dataSource>
+	    </environment>
+	  </environments>
+
+	<!-- 환경설정 -->
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="multipleResultSetEnabled" value="true"/>
+		<setting name="useColumnLabel" value="true"/>
+		<setting name="useGeneratedkeys" value="true"/>
+	</settings>
+	
+
+  <mappers>
+    <mapper resource="mappers/*-Mapper.xml"/>
+  </mappers>
+  <typeAliases>
+  	<package name="com.zoile.kdtcom.model"/>
+  </typeAliases>
+</configuration>

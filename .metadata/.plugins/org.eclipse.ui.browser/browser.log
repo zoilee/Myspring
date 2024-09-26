@@ -1,0 +1,21 @@
+
+9월 25, 2024 11:07:07.772 NEW SESSION
+9월 25, 2024 11:07:07.772 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2024 14:58:07.233 Created TensorFlow Lite XNNPACK delegate for CPU.
+9월 25, 2024 14:59:23.828 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: Fetch 諛� XHR", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.828 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: 臾몄꽌", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.829 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: 湲�瑗�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.829 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: �씠誘몄�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.829 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: 誘몃뵒�뼱", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.829 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: 留ㅻ땲�럹�뒪�듃", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:23.830 [9904:14748:0925/145923.828:ERROR:CONSOLE(1)] "Unknown VE context: 湲고�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.281 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: Fetch諛뢝HR", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.282 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: 臾몄꽌", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.282 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: 湲�瑗�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.282 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: �씠誘몄�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.283 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: 誘몃뵒�뼱", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.283 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: 留ㅻ땲�럹�뒪�듃", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+9월 25, 2024 14:59:24.284 [9904:14748:0925/145924.281:ERROR:CONSOLE(1)] "Unknown VE context: 湲고�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+
+9월 26, 2024 16:58:39.813 NEW SESSION
+9월 26, 2024 16:58:39.813 Created TensorFlow Lite XNNPACK delegate for CPU.

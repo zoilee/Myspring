@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zoile.kdtcom.dao.MemberMapper">
+  <select id="findById" resultType="MemberDto" parameterType="int">
+    select * from members where id = #{id}
+  </select>
+  
+  <select id="findList" resultType="MemberDto">
+  	select * from members order by id desc;
+  </select>
+  
+  <insert id="insertMember" parameterType="MemberDto" resultType="int">
+  	insert into members 
+  		(userid, userpass, username, useremail, usertel, zipcode, address, detail_address, extra_address, userimg, userprofile, userip)
+  		 values
+  		(#{userid}, #{userpass}, #{username}, #{useremail}, #{usertel}, #{zipcode}, #{address}, #{detail_address}, #{extra_address}, #{userimg}, #{userprofile}, #{userip})
+  </insert>
+</mapper>

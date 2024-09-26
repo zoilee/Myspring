@@ -1,0 +1,25 @@
+package com.zoile.kdtcom.controller.dto;
+
+public class MemberDto {
+	private int id;
+	private String name;
+	private String email;
+	private Timestamp create_at;
+	private int id;
+	userid varchar(45) 
+	userpass varchar(120) 
+	username varchar(45) 
+	useremail varchar(100) 
+	usertel varchar(20) 
+	zipcode int 
+	address varchar(255) 
+	detail_address varchar(255) 
+	extra_address varchar(255) 
+	memberscol varchar(45) 
+	userimg varchar(255) 
+	userprofile text 
+	create_at datetime 
+	edit_at datetime 
+	userip varchar(20) 
+	grade int
+}

@@ -1,0 +1,39 @@
+package com.zoile.kdtcom.controller.dao;
+
+import java.util.List;
+
+import com.zoile.kdtcom.model.MemberDto;
+
+public class MemberDaoImpl implements MemberDao {
+
+	@Override
+	public List<MemberDto> getAllMembers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public MemberDto getMem(int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void insertMem(MemberDto dto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void upadteMem(MemberDto dto) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void delMem(int num) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

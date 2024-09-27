@@ -1,0 +1,39 @@
+package com.zoile.kdtcom.controller;
+
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+
+import com.zoile.kdtcom.controller.service.ClientIpAddress;
+import com.zoile.kdtcom.controller.service.FileUploadService;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations= {
+		"classpath:root-context.xml",
+		"classpath:servlet-context.xml"
+})
+public class MainControllerTest {
+
+	private MockMvc mockMvc;
+	
+	@Mock
+	private FileUploadService fileUploadService;
+	
+	@Mock
+	private ClientIpAddress clientIpAddress;
+	
+	@InjectMocks
+	private MainController mainController;
+	
+	@Before
+	public void setUp() {
+		MockitoAnnotations.initMocks(this);
+		mockMvc = MockMvcBuilders.standaloneSetup(mainController).build();
+	}
+}

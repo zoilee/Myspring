@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zoile.kdtcom.dao.MemberMapper">
+  <select id="findById" resultType="com.zoile.kdtcom.model.MemberDto" parameterType="int">
+    select * from members where id = #{id}
+  </select>
+  
+  <select id="findList" resultType="com.zoile.kdtcom.model.MemberDto">
+  	select * from members order by id desc;
+  </select>
+  
+  <insert id="insertMember" parameterType="com.zoile.kdtcom.model.MemberDto">
+  	insert into members 
+  		(userid, userpass, username, useremail, usertel, zipcode, address, detail_address, extra_address, userimg, userprofile, userip)
+  		 values
+  		(#{userid}, #{userpass}, #{username}, #{useremail}, #{usertel}, #{zipcode}, #{address}, #{detail_address}, #{extra_address}, #{userimg}, #{userprofile}, #{userip})
+  </insert>
+  
+  <update id="updateMember" parameterType="com.zoile.kdtcom.model.MemberDto">
+  	update member set 
+  		userpass = #{userpass}, 
+  		username = #{username}, 
+  		useremail = #{useremail}, 
+  		usertel = #{usertel}, 
+  		zipcode = #{zipcode}, 
+  		address = #{address}, 
+  		detail_address = #{detail_address}, 
+  		extra_address = #{extra_address}, 
+  		userimg = #{userimg}, 
+  		userprofile = #{userprofile}, 
+  		userip = #{userip}
+  	where id = #{id}
+  </update>
+  
+  <delete id="deleteMember" parameterType="int">
+  	delete from members where id = #{id}
+  </delete>
+  
+</mapper>

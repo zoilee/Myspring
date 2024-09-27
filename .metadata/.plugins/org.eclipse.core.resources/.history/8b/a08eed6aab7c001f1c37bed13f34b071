@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 환경설정 -->
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+		<setting name="lazyLoadingEnabled" value="true"/>
+		<setting name="multipleResultSetsEnabled" value="true"/>
+		<setting name="useColumnLabel" value="true"/>
+		<setting name="useGeneratedKeys" value="true"/>
+		<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+	<typeAliases>
+  		<package name="com.zoile.kdtcom.model"/>
+  	</typeAliases>
+	
+  	<mappers>
+		<package name="com.zoile.kdtcom.controller.dao"/>  <!-- 매퍼 인터페이스가 위치한 패키지 -->
+	</mappers>
+  
+
+
+</configuration>

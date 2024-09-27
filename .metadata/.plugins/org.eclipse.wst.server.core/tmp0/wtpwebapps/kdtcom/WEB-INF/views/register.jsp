@@ -4,13 +4,17 @@
  <!-- 본문내용 --> 
                      <h1 class="my-4 text-center">회원가입</h1>
                      <p class="text-center text-secondary"><span class="text-danger">*</span>표시가 있는 곳은 필수 입니다.</p>
-                    <form name="register" action="register" method="post">
+                    <form name="register" action="register" id="register" method="post" enctype="multipart/form-data">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>아이디</div>
                                     <div class="col-md-4">
-                                        <input type="text" name="userid" class="form-control">
+                                        <input type="text" name="userid" id="userid" class="form-control">
+                                    	<input type="hidden" id="ok" >
+                                    </div>
+                                    <div class="col-md-3">
+                                    	  <button type="button" id="checkid" class="btn btn-warning">아이디중복검사</button>
                                     </div>
                                 </div>
                             </li>
@@ -18,7 +22,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>비밀번호</div>
                                     <div class="col-md-4">
-                                        <input type="password" name="userpass" class="form-control">
+                                        <input type="password" name="userpass" id="userpass" class="form-control">                                        
                                     </div>
                                 </div>
                             </li>
@@ -26,7 +30,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>비밀번호 확인</div>
                                     <div class="col-md-4">
-                                        <input type="password" name="reuserpass" class="form-control">
+                                        <input type="password" name="reuserpass" id="reuserpass" class="form-control">
                                     </div>
                                 </div>
                             </li>
@@ -34,7 +38,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>이름</div>
                                     <div class="col-md-4">
-                                        <input type="text" name="username" class="form-control">
+                                        <input type="text" name="username" id="username" class="form-control">
                                     </div>
                                 </div>                               
                             </li>
@@ -42,7 +46,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>이메일</div>
                                     <div class="col-md-5">
-                                        <input type="text" name="useremail" class="form-control">
+                                        <input type="text" name="useremail" id="useremail" class="form-control">
                                     </div>
                                 </div>                               
                             </li>
@@ -50,7 +54,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>전화번호</div>
                                     <div class="col-md-6">
-                                        <input type="text" name="useremail" class="form-control">
+                                        <input type="text" name="usertel" id="usertel" class="form-control">
                                     </div>
                                 </div>                               
                             </li>
@@ -60,13 +64,13 @@
                                     <div class="col-md-9">
                                         <div class="row">
                                             <div class="col-12 d-flex">
-                                                <input type="text" id="postcode" class="form-control col-3" placeholder="우편번호">
+                                                <input type="text" id="postcode" name="zipcode" class="form-control col-3" placeholder="우편번호">
                                                 <input type="button" onclick="execDaumPostcode()" class="btn btn-primary ml-2" value="우편번호 찾기">
                                             </div>
                                             <div class="col-12">
-                                                <input type="text" id="address" class="form-control mt-2" placeholder="주소">
-                                                <input type="text" id="detailAddress" class="form-control mt-2" placeholder="상세주소">
-                                                <input type="text" id="extraAddress" class="form-control mt-2" placeholder="참고항목">
+                                                <input type="text" id="address" name="address" class="form-control mt-2" placeholder="주소">
+                                                <input type="text" id="detailAddress" name="detail_address" class="form-control mt-2" placeholder="상세주소">
+                                                <input type="text" id="extraAddress" name="extra_address" class="form-control mt-2" placeholder="참고항목">
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +80,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right">사진</div>
                                     <div class="col-md-6">
-                                        <input type="file" name="reuserimg" class="form-control">
+                                        <input type="file" name="userimg" id="userimg" class="form-control">
                                     </div>
                                 </div>                               
                             </li>
@@ -84,7 +88,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right">자기소개</div>
                                     <div class="col-md-9">
-                                        <textarea name="userprofile" class="form-control" rows="3"></textarea>
+                                        <textarea name="userprofile" id="userprofile" class="form-control" rows="3"></textarea>
                                     </div>
                                 </div>                               
                             </li>

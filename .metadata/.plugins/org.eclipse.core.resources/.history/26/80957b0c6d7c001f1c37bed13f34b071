@@ -1,0 +1,23 @@
+const regex = {
+	value: function(selector, msg) {
+		var target = $(selector); //선택한 변수를 target에 저장
+		if(!target.val()){        //target에 값이 없으면
+			alert(msg);       //메세지 변수를 표시
+			target.focus();
+			return false;
+		}
+		return true;
+	},
+	
+	/* 길이 제한 */
+	max_length : function(selector, len, msg) {
+		var target = $(selector);
+		if(target.val().length > len) {
+			alert(msg);
+			target.val("");
+			target.focus();
+			return false;
+		}
+		return true;
+	}
+}

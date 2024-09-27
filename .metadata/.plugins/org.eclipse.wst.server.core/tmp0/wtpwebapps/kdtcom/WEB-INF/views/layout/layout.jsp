@@ -13,6 +13,7 @@
 <script src="res/js/jquery.min.js"></script>
 <script src="res/js/popper.min.js"></script>
 <script src="res/js/bootstrap.min.js"></script>
+<script src="res/js/regex.js"></script>
 <script src="res/js/script.js"></script>
 </head>
 <body>

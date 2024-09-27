@@ -1,0 +1,1 @@
+C:\suseok\springworks\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\kdtcom

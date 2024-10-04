@@ -10,4 +10,5 @@
     <fullyQualifiedTypeName name="org.junit.Before"/>
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="com.zoile.kdtcom.model.MemberDto"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.MemberRole"/>
 </qualifiedTypeNameHistroy>

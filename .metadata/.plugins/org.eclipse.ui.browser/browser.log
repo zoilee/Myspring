@@ -89,3 +89,6 @@
 9월 27, 2024 17:41:00.190 [11444:14856:0927/174100.187:ERROR:CONSOLE(1)] "Unknown VE context: 留ㅻ땲�럹�뒪�듃", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 9월 27, 2024 17:41:00.190 [11444:14856:0927/174100.187:ERROR:CONSOLE(1)] "Unknown VE context: 湲고�", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 9월 27, 2024 17:55:29.890 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 04, 2024 16:50:02.105 NEW SESSION
+10월 04, 2024 16:50:02.105 Created TensorFlow Lite XNNPACK delegate for CPU.

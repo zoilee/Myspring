@@ -1,5 +1,0 @@
-package com.zoile.kdtcom.controller.dao;
-
-public interface MemberDao {
-
-}

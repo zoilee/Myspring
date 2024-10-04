@@ -1,6 +1,0 @@
-	$(function(){
-		$("#register").submit(function(e){
-			e.preventDefault();
-			if(!regex.value("#userid", "아이디를 입력하세요")){return false;}
-		});
-	});

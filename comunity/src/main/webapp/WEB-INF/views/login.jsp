@@ -1,8 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:if test="${not empty errorMessage}">
+	<script>
+		alert('${errorMessage}');
+	</script>
+</c:if>
+
 <h2 class="text-center mt-4 mb-5">회원 로그인</h2>
-<form action="<c:url value='/login' /> " method="post">
+<form action="./login" method="post">
 	<table>
 		<tr>
 			<td>아이디 : </td>
@@ -17,7 +23,7 @@
 				<input type="submit" value=" 로 그 인 " />
 			</td>
 		</tr>
-		
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 	</table>
 
 </form>

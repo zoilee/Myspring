@@ -104,7 +104,7 @@ public class MainController {
 		int membersid= dto.getId();
 		
 		rdto.setMembersid(membersid);
-		rdto.setUser_role(role);
+		rdto.setUserRole(role);
 		
 		dao.insertMemRole(rdto);
 		
@@ -114,9 +114,20 @@ public class MainController {
 	}
 	
 	@GetMapping("/login")
-	public String loginForm(Model model) {
+	public String loginForm(@RequestParam(value="error", required=false) String error, Model model) {
+		if(error != null) {
+			model.addAttribute("errorMessage", "아이디 또는 비밀번호가 틀렸습니다.");
+		}
 		return "login";
 	}
+	
+	@GetMapping("/home")
+	public String Home(Model model) {
+		model.addAttribute("error", "");
+		return "home";
+	}
+	
+	
 	
 	@GetMapping("/member")
 	public String memberIndex(Model model) {

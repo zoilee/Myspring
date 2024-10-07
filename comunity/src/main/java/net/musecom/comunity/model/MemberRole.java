@@ -6,5 +6,5 @@ import lombok.Data;
 public class MemberRole {
 	private int id;
 	private int membersid;
-	private String user_role;
+	private String userRole;
 }

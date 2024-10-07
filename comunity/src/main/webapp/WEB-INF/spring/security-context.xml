@@ -11,17 +11,24 @@
 		
 	<!-- http 설정 -->	               
 	<http auto-config="true" use-expressions="true">
-	   <intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
-	   <intercept-url pattern="/member/**" access="hasAnyRole('ROLE_ADMIN', 'ROLE_USer')" />
-	   <form-login login-page="/login" default-target-url="/index" authentication-failure-url="/index?error=error"/>
-	   <logout logout-success-url="/index?logout=logout"/>
+	   <intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
+	   <intercept-url pattern="/member/**" access="hasAnyRole('ADMIN', 'USER')" />
+	   <form-login login-page="/login" default-target-url="/home" authentication-failure-url="/login?error=error"
+	   	username-parameter="userid" password-parameter="userpass"
+	   />
+	   <logout logout-success-url="/login?logout=logout"/>
 	   <csrf/>
 	</http>
 	
-	<!-- Authentication 메니저 설정 -->	    
-	<user-service>
-		<user name="user" password="password" authorities="ROLE_USER" />
-	</user-service> 
 	
-	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>          
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>    
+	<beans:bean id="customUserDetailService" class="net.musecom.comunity.service.CustomUserDetailService"/>      
+	<!-- Authentication 메니저 설정 -->	    
+	<authentication-manager>
+		<authentication-provider user-service-ref="customUserDetailService">
+			<password-encoder ref="passwordEncoder" />
+		</authentication-provider>
+	</authentication-manager>
+	
+	
 </beans:beans>

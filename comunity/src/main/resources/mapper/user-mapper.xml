@@ -3,8 +3,11 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="net.musecom.comunity.mapper.MemberMapper">
-  <select id="getMemberUserId" resultType="net.musecom.comunity.model.Member">
+  <select id="getMemberUserId" parameterType="String" resultType="Member">
      SELECT * FROM members WHERE userid = #{userid}
+  </select>
+  <select id="getMemberRole" parameterType="int" resultType="MemberRole">
+  	SELECT * FROM members_role WHERE membersid=#{membersid}
   </select>
   <insert id="setInsertMember" parameterType="Member"
   		  useGeneratedKeys="true" keyProperty="id">

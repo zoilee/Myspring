@@ -1,17 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
-
  <!-- 본문내용 --> 
                     <h1 class="my-4 text-center">회원가입</h1>
                     <p class="text-center text-secondary"><span class="text-danger">*</span>표시가 있는 곳은 필수 입니다.</p>
-                    <form name="register" id="register" action="register" method="post" enctype="multipart/form-data">
+                    <form name="register" id="register" action="register?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>아이디</div>
                                     <div class="col-md-4">
-                                        <input type="text" name="userid" id="userid" class="form-control">
+                                        <input type="text" name="userid" id="rguserid" class="form-control">
                                         <input type="hidden" id="ok" />
                                     </div>
                                     <div class="col-md-3"><button type="button" id="checkid" class="btn btn-warning">아이디중복검사</button></div>
@@ -21,7 +20,7 @@
                                 <div class="row">
                                     <div class="col-md-3 text-right"><span class="text-danger">*</span>비밀번호</div>
                                     <div class="col-md-4">
-                                        <input type="password" name="userpass" id="userpass" class="form-control">
+                                        <input type="password" name="userpass" id="rguserpass" class="form-control">
                                     </div>
                                 </div>
                             </li>

@@ -1,9 +1,14 @@
 package net.musecom.comunity;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import net.musecom.comunity.model.CustomUserDetails;
+import net.musecom.comunity.model.Member;
 
 
 @Controller
@@ -11,8 +16,23 @@ public class HomeController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Model model) {
+		String userid = null;
+		//인증정보를 이용한 사용자 정보 가져오기
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		System.out.println("권한" + auth);
 		
-		model.addAttribute("test", "커뮤니티사이트 연습" );
+		if(auth != null && auth.getPrincipal() instanceof CustomUserDetails) {
+				
+				CustomUserDetails userDetails = (CustomUserDetails) auth.getPrincipal();		
+				userid = userDetails.getUsername();
+				Member member = userDetails.getMember();
+				System.out.println("우저아이디" + userDetails.toString());
+				model.addAttribute("member", member);
+			
+		}
+		
+		model.addAttribute("userid", userid );
+		
 		
 		return "home";
 	}

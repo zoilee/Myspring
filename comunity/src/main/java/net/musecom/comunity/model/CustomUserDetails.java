@@ -66,4 +66,10 @@ public class CustomUserDetails implements UserDetails {
 		return true;
 	}
 
+	@Override
+	public String toString() {
+		return "CustomUserDetails [member=" + member + ", authorities=" + authorities + "]";
+	}
+
+	
 }

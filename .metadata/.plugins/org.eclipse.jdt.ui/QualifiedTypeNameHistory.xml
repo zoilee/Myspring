@@ -12,6 +12,9 @@
     <fullyQualifiedTypeName name="com.zoile.kdtcom.model.MemberDto"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.MemberRole"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
-    <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.BbsAdmin"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.CustomUserDetails"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
 </qualifiedTypeNameHistroy>

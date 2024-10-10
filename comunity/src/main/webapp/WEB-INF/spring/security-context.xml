@@ -11,12 +11,13 @@
 		
 	<!-- http 설정 -->	               
 	<http auto-config="true" use-expressions="true">
+	
 	   <intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
 	   <intercept-url pattern="/member/**" access="hasAnyRole('ADMIN', 'USER')" />
-	   <form-login login-page="/login" default-target-url="/home" authentication-failure-url="/login?error=error"
+	   <form-login login-page="/login" default-target-url="/" authentication-failure-url="/login?error=error"
 	   	username-parameter="userid" password-parameter="userpass"
 	   />
-	   <logout logout-success-url="/login?logout=logout"/>
+	   <logout logout-url="/logout" logout-success-url="/?logout=logout"/>
 	   <csrf/>
 	</http>
 	

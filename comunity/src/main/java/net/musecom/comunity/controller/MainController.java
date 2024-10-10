@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import net.musecom.comunity.dao.MemberDao;
 import net.musecom.comunity.model.Member;
@@ -53,7 +54,7 @@ public class MainController {
 			@RequestParam("role") String role,
 			@RequestParam(value="userimg", required=false) MultipartFile userimg,
 			HttpServletRequest request,
-			Model model
+			RedirectAttributes redirectAttributes
 			) {
 		
 		if(zipcode == null) {zipcode = 0; } //int가 비었을 때 처리
@@ -73,8 +74,8 @@ public class MainController {
 		dto.setUsertel(usertel);
 		dto.setZipcode(zipcode);
 		dto.setAddress(address);
-		dto.setDetail_address(detail_address);
-		dto.setExtra_address(extra_address);
+		dto.setDetailAddress(detail_address);
+		dto.setExtraAddress(extra_address);
 		//dto.setUserimg(userimg);
 		dto.setUserprofile(userprofile);
 		dto.setUserip(userip);
@@ -93,8 +94,8 @@ public class MainController {
 			  dto.setUserimg(fnames[1]);
 			  
 			}catch(Exception e) {
-				model.addAttribute("error", e.getMessage());
-				return "home";
+				redirectAttributes.addFlashAttribute("error", e.getMessage());
+				return "redirect:/";
 			}
 		}	
 		
@@ -108,9 +109,10 @@ public class MainController {
 		
 		dao.insertMemRole(rdto);
 		
-		model.addAttribute("nimg", dto.getUserimg());
+		//redirect 일떄 정보 전달 방법
+		redirectAttributes.addFlashAttribute("memberok", "ok");
 		
-		return "home";
+		return "redirect:/";
 	}
 	
 	@GetMapping("/login")
@@ -121,12 +123,7 @@ public class MainController {
 		return "login";
 	}
 	
-	@GetMapping("/home")
-	public String Home(Model model) {
-		model.addAttribute("error", "");
-		return "home";
-	}
-	
+
 	
 	
 	@GetMapping("/member")

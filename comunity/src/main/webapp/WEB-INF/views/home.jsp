@@ -1,12 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
 <script src="res/js/photo-gallery.js"></script>
 <c:if test="${not empty error }">
   <script>
     alert("${error}");
     history.go(-1);
   </script>
+</c:if>
+<c:if test="${param.logout != null}">
+	<script>
+    	alert("로그아웃되었습니다.");
+    </script>
+</c:if>
+<c:if test="${not empty memberok }">
+  <script>
+   alert("정상적으로 가입되었습니다. 로그인하세요.");
+  </script> 
 </c:if>
 <div class="row">
           <div class="col-6">

@@ -14,13 +14,13 @@ public class Member {
 	  private String usertel;
 	  private int zipcode;
 	  private String address;
-	  private String detail_address;
-	  private String extra_address;
+	  private String detailAddress;
+	  private String extraAddress;
 	  private String userimg;
 	  private String oruserimg;
 	  private String userprofile;
-	  private Timestamp create_at;
-	  private Timestamp edit_at;
+	  private Timestamp createAt;
+	  private Timestamp editAt;
 	  private String userip;
 	  private int grade;
 }

@@ -19,7 +19,7 @@
      values
      (
        #{userid}, #{userpass}, #{username}, #{useremail}, #{usertel},
-       #{zipcode}, #{address}, #{detail_address}, #{extra_address},
+       #{zipcode}, #{address}, #{detailAddress}, #{extraAddress},
        #{userimg}, #{oruserimg}, #{userprofile}, #{userip}
      )
   </insert>
@@ -27,6 +27,6 @@
   <insert id="setInsertRole" parameterType="MemberRole">
   	insert into members_role (membersid, user_role)
   	values
-  	(#{membersid}, #{user_role})
+  	(#{membersid}, #{userRole})
   </insert>
 </mapper>

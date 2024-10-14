@@ -133,6 +133,7 @@ public class MainController {
 	
 	@GetMapping("/admin")
 	public String adminIndex(Model model) {
+		
 		return "admin.index";
 	}
 }

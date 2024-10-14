@@ -1943,3 +1943,13 @@
 10월 10, 2024 17:15:33.898 Created TensorFlow Lite XNNPACK delegate for CPU.
 10월 10, 2024 17:15:56.729 Created TensorFlow Lite XNNPACK delegate for CPU.
 10월 10, 2024 17:17:21.916 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 14, 2024 15:57:57.815 NEW SESSION
+10월 14, 2024 15:57:57.817 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 16:00:29.855 [13816:14056:1014/160029.855:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 14, 2024 16:10:18.568 [13816:14056:1014/161018.567:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+10월 14, 2024 16:28:10.94 [13816:14056:1014/162810.093:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 16:28:10.528 [13816:14056:1014/162810.528:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 16:28:11.130 [13816:14056:1014/162811.129:ERROR:CONSOLE(1)] "Unknown VE context: -webkit-text-size-adjust", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 14, 2024 17:44:01.661 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 14, 2024 17:45:38.765 [9612:3152:1014/174538.765:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost

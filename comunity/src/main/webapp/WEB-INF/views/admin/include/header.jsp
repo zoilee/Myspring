@@ -5,7 +5,7 @@
  <h1>관리자 모드</h1>
  <nav class="d-flex justify-content between">
 	 <div>
-	 	<a href="admin/mkbbs" class="btn btn-outline-dark mx-2">커뮤니티사항등록성</a>
+	 	<a href="./admin/write" class="btn btn-outline-dark mx-2">공지사항등록</a>
 	 	<a href="admin/mkbbs" class="btn btn-outline-dark mx-2">커뮤니티생성</a>
 	 	<a href="admin/mkbbs" class="btn btn-outline-dark mx-2">커뮤니티관리</a>
 	 	<a href="admin/mkbbs" class="btn btn-outline-dark mx-2">회원관리</a>

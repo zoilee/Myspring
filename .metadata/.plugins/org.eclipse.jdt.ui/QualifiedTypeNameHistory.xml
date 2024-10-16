@@ -3,7 +3,6 @@
     <fullyQualifiedTypeName name="java.sql.Timestamp"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="com.zoile.kdtcom.controller.service.ClientIpAddress"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
@@ -17,4 +16,5 @@
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.CustomUserDetails"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 </qualifiedTypeNameHistroy>

@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/comunity/res/css/remixicon.css">
     <link rel="stylesheet" href="/comunity/res/css/bootstrap.min.css">
     <link rel="stylesheet" href="/comunity/res/css/style.css">
+    <link rel="stylesheet" href="/comunity/res/admin/css/style.css">
     <script src="/comunity/res/js/jquery.min.js"></script>
     <script src="/comunity/res/js/popper.min.js"></script>
     <script src="/comunity/res/js/regex.js"></script>

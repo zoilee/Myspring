@@ -131,9 +131,5 @@ public class MainController {
 		return "member.index";
 	}
 	
-	@GetMapping("/admin")
-	public String adminIndex(Model model) {
-		
-		return "admin.index";
-	}
+
 }

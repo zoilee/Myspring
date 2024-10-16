@@ -70,7 +70,7 @@ header{
     white-space: nowrap;
 }
 
-/**** 공지사항 ****/
+/**** 怨듭��궗�빆 ****/
 .noticeul li{
     padding:8px 10px;
     display:flex;
@@ -148,7 +148,7 @@ a.blogs{
 }
 
 
-/*************** 회원가입 ***************/
+/*************** �쉶�썝媛��엯 ***************/
 .rg{
 	margin-bottom:30px !important;
 }
@@ -156,7 +156,7 @@ a.blogs{
 	padding:20px 40px;
 }
 
-/****************** 아이디, 비밀번호 찾기 ************/
+/****************** �븘�씠�뵒, 鍮꾨�踰덊샇 李얘린 ************/
 .rg.findidpass{
 	padding-bottom:50px;
 }
@@ -332,6 +332,24 @@ section.view{
 }
 .bbspass>.password{
 	margin-bottom:40px;
+}
+/******* admin *******/
+.comtable{
+	font-size:14px;
+}
+.comtable input{
+	max-width:40px;
+}
+.comtable input.bbstitle{
+	max-width:100px;
+}
+.comtable th,
+.comtable td{
+	text-align:center;
+}
+input[type=text],
+select{
+	width:80px;
 }
 
 /****** paging *****/

@@ -21,9 +21,9 @@
 		</label>
 		<div class="col-10 py-3 my-3">
 			<select name="category" id="" class="form-control">
-				<option value="">공지</option>
-				<option value="">이벤트</option>
-				<option value="">긴급</option>
+				<c:forEach items="${categories}" var="category">
+					<option value="${category.categorytext}">${category.categorytext}</option>
+				</c:forEach>
 			</select>
 		</div>
 		<label class="col-2 text-right py-3 my-3">

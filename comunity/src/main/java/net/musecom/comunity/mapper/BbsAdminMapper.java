@@ -5,9 +5,9 @@ import java.util.List;
 import net.musecom.comunity.model.BbsAdmin;
 
 public interface BbsAdminMapper {
-	void insertBbsAdmin(BbsAdmin dto);
-	void updateBbsAdmin(BbsAdmin dto);
-	void deleteBbsAdmin(int id);
+	int insertBbsAdmin(BbsAdmin dto);
+	int updateBbsAdmin(BbsAdmin dto);
+	int deleteBbsAdmin(int id);
 	BbsAdmin selectByid(int id);
 	List<BbsAdmin> selectList();
 }

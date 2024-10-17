@@ -17,4 +17,6 @@
     <fullyQualifiedTypeName name="net.musecom.comunity.model.CustomUserDetails"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.BbsCategory"/>
 </qualifiedTypeNameHistroy>

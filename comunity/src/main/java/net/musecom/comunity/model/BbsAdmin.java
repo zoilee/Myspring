@@ -17,7 +17,7 @@ public class BbsAdmin {
 	private byte comgrade;
 	private int filesize;
 	private int allfilesize;
-	private String thimsize;
+	private String thimgsize;
 	private String imgsize;
 	
 }

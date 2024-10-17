@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <script>
   $(function(){
     ${script} 
@@ -9,18 +10,35 @@
     	const tr = $(this).closest("tr");
     	const id = tr.find("input[name='id']").val();
     	const bbstitle = tr.find("input[name='bbstitle']").val();
-    	const skin = tr.find("input[name='skin']").val();
-    	const category = tr.find("input[name='category']").val();
+    	const skin = tr.find("select[name='skin']").val();
+    	const category = tr.find("select[name='category']").val();
     	const listcount = tr.find("input[name='listcount']").val();
     	const pagecount = tr.find("input[name='pagecount']").val();
-    	const lgrade = tr.find("input[name='lgrade']").val();
-    	const rgrade = tr.find("input[name='rgrade']").val();
-    	const fgrade = tr.find("input[name='fgrade']").val();
-    	const regrade = tr.find("input[name='regrade']").val();
-    	const comgrade = tr.find("input[name='comgrade']").val();
+    	const lgrade = tr.find("select[name='lgrade']").val();
+    	const rgrade = tr.find("select[name='rgrade']").val();
+    	const fgrade = tr.find("select[name='fgrade']").val();
+    	const regrade = tr.find("select[name='regrade']").val();
+    	const comgrade = tr.find("select[name='comgrade']").val();
+    	
+    	const data = {
+			id,
+			bbstitle,
+			skin,
+			category,
+			listcount,
+			pagecount,
+			lgrade,
+			rgrade,
+			fgrade,
+			regrade,
+			comgrade    			
+		}
+    	
+    	console.dir(data);
+    	
     	
     	$.ajax({
-    		url: "/editbbsAdmin",
+    		url: "/comunity/admin/editBbsAdmin",
     		method: "post",
     		data: {
     			id,
@@ -33,15 +51,16 @@
     			rgrade,
     			fgrade,
     			regrade,
-    			comgrade    			
+    			comgrade,
+    			${_csrf.parameterName} : "${_csrf.token}"
     		},
     		success: function(res){
     			if(res == 1){
     				alert("수정되었습니다.");
-    				location.reload();  // 페이지 새로고침
+    				location.reload(true);  // 페이지 새로고침
     			}else{
     				alert("문제가 발생했습니다. 다시 시도해 주세요.");
-    				location.reload();
+    				location.reload(true);
     			}
     		},
     		error: function(xhr, status, error){
@@ -49,7 +68,10 @@
     		}
     	});
     	
+
     });
+    
+    $( ".sortable" ).sortable();
   });
 </script>
 <h1 class="text-center mb-4">관리자 모드</h1>
@@ -86,16 +108,48 @@
                </select>
            </td>
            <td>
-              <select name="category" id="category${listid}">
+              <select name="category" id="category${list.id}">
                  <option value="0">사용안함</option>
                  <option value="1">사용함</option>
               </select>
+              <c:if test="${list.category ==1}">
+              	<br />
+              	<a href="javascript:void(0)" data-toggle="modal" data-target="#cate-${list.id}">카테고리 관리</a>
+              	<div class="modal" id="cate-${list.id}">
+              		<div class="modal-content" style="padding:30px;">              		
+              			<div class="modal-body">
+              				<form action="">
+	              				<input type="hidden" name="bbsid" value="${list.id}"/>
+	              				<div class="input-group mb-3">
+	              					<input type="text" name="categorytext" class="form-control" placeholder="카테고리이름" style="max-width:100%;" />
+	              					<div class="input-group-append">
+	              						<button class="btn btn-danger" type="button">Cancel</button>
+	              						<button class="btn btn-primary" type="button">OK</button>
+	              					</div>
+	              				</div>
+              				</form>
+              				<form action="">
+              					<input type="hidden" name="bbsid" value="${list.id}" />
+              					<ul class="sortable">
+              					<c:forEach var="cate" items="${categoryList }">
+								  <li class="ui-state-default" id="${cate.id}"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${cate.categorytext} </li>
+								</c:forEach>
+								</ul>								
+              				</form>
+              			</div>
+              			
+              			<div class="modal-footer">
+              				<button type="button" class="btn btn-danger" data-dismiss="modal">닫기</button>
+              			</div>
+              		</div>
+              	</div>
+              </c:if>
            </td>
            <td>
-              <input type="text" name="listcount[]" value="${list.listcount }" />
+              <input type="text" name="listcount" value="${list.listcount }" />
            </td>  
            <td>
-              <input type="text" name="pagecount[]" value="${list.pagecount}" />
+              <input type="text" name="pagecount" value="${list.pagecount}" />
           </td>
            
            <td>
@@ -152,6 +206,5 @@
            </td>       
         </tr>
      </c:forEach>
-
   </tbody>
 </table>

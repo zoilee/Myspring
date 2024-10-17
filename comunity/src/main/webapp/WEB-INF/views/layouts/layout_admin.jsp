@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="/comunity/res/css/bootstrap.min.css">
     <link rel="stylesheet" href="/comunity/res/css/style.css">
     <link rel="stylesheet" href="/comunity/res/admin/css/style.css">
+    
+    <link rel="stylesheet" href="/comunity/res/css/jquery-ui.min.css"/>
+
+    
     <script src="/comunity/res/js/jquery.min.js"></script>
     <script src="/comunity/res/js/popper.min.js"></script>
     <script src="/comunity/res/js/regex.js"></script>
@@ -27,6 +31,8 @@
     <script src="/comunity/res/js/pycs-layout.jquery.js"></script>
     <script src="/comunity/res/js/jquery.validate.min.js"></script>
     <script src="/comunity/res/js/script.js"></script>
+    
+    <script src="/comunity/res/js/jquery-ui.min.js"></script>
 </head>
 <html>
   <meta charset="UTF-8">

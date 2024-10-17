@@ -1,0 +1,8 @@
+신규작업
+
+hidden => bbsid        bbsid에
+test->categorytext - >  categorytext
+
+마지막 +1 => categorynum
+
+수정작업

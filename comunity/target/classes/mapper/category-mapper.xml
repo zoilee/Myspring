@@ -6,5 +6,26 @@
 	<select id="selectCategoryByBbsId" parameterType = "int" resultType="BbsCategory">
 		SELECT * FROM category WHERE bbsid=#{bbsid} ORDER BY categorynum;
 	</select>
+	<insert id="insertCategory" parameterType="BbsCategory">
+     insert into category(
+        bbsid, categorytext, categorynum,
+     )
+     values
+     (
+       #{bbsid}, #{categorytext}, #{categorynum}, 
+     )
+  </insert>
+  <update id="updateCategory" parameterType="BbsCategory">
+    UPDATE category
+    SET
+        bbsid = #{bbsid},
+        categorytext = #{categorytext},
+        categorynum = #{categorynum},
+        
+    WHERE id = #{id}
+  </update>
+  <delete id="deleteBbsAdmin" parameterType="int">
+  	DELTE from category where id = #{id}
+  </delete>
 </mapper>
   

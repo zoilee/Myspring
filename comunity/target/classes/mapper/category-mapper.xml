@@ -6,6 +6,9 @@
 	<select id="selectCategoryByBbsId" parameterType = "int" resultType="BbsCategory">
 		SELECT * FROM category WHERE bbsid=#{bbsid} ORDER BY categorynum;
 	</select>
+	<select id="selectMaxCategorynum" parameterType = "int" resultType="int">
+		SELECT COALESCE(MAX(categorynum),0) from category WHERE bbsid=#{bbsid}
+	</select>
 	<insert id="insertCategory" parameterType="BbsCategory">
      insert into category(
         bbsid, categorytext, categorynum,
@@ -27,5 +30,6 @@
   <delete id="deleteBbsAdmin" parameterType="int">
   	DELTE from category where id = #{id}
   </delete>
+  
 </mapper>
   

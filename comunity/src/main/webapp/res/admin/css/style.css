@@ -351,6 +351,18 @@ input[type=text],
 select{
 	width:80px;
 }
+.comtable input.categorylist{
+	max-width:100%;
+	width:200px;
+}
+ul.sortable{
+	list-style-type:none;
+}
+ul.sortable li{
+	padding-top:5px;
+	padding-bottom:5px;
+	display:flex;
+}
 
 /****** paging *****/
 /* my work

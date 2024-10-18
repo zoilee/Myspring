@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -45,10 +46,12 @@ public class AdminController {
 			script += "$('#category"+admin.getId()+"').val('"+admin.getCategory()+"').prop('selected',true);";			
 			
 			if(admin.getCategory() == 1) {
-				List<BbsCategory> bbsCategory = categoryMapper.selectCategoryByBbsId(admin.getId());
+				List<BbsCategory> categoryList = categoryMapper.selectCategoryByBbsId(admin.getId());	
 				
-				model.addAttribute("categoryList", categoryMapper.selectCategoryByBbsId(admin.getId()));
-				System.out.println("categoryList :" + bbsCategory );
+				model.addAttribute("categoryList", (
+										categoryList != null && !categoryList.isEmpty()) ? categoryList : ""
+								  );
+				
 			}
 		}
 		model.addAttribute("script", script);
@@ -101,7 +104,36 @@ public class AdminController {
 		return result;
 	}
 	
+	//카테고리 추가 삭제 수정
+	@PostMapping("/addCategory")
+	@ResponseBody
+	public String addCategory(
+			@RequestBody BbsCategory category
+			) {
+		int maxCategoryNum = categoryMapper.selectMaxCategorynum(category.getBbsid());
+		category.setCategorynum(maxCategoryNum+1);
+		int result = categoryMapper.insertCategory(category);
+		String res = result > 0 ? "1" : "0";
+		return res;
+	}
+	@PostMapping("/editCategory")
+	@ResponseBody
+	public String editCategory(
+			@RequestBody BbsCategory category
+			) {
+		return "0";
+	}
+	@PostMapping("/delCategory")
+	@ResponseBody
+	public String deleteCategory(@RequestParam("id") int id) {
+		int result = categoryMapper.deleteCategory(id);
+		String res = result > 0 ? "1" : "0";
+		
+		return res;
+	}
 	
+	
+	/*
 	@PostMapping("/categoryAdmin")
 	@ResponseBody
 	public  String categoryAdmin(
@@ -126,6 +158,6 @@ public class AdminController {
 
 		return result;
 	}
-	
+	*/
 	
 }

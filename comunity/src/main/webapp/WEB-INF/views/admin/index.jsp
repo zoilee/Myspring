@@ -72,6 +72,38 @@
     });
     
     $( ".sortable" ).sortable();
+    
+    $(".addCate").click(function(){
+    	const form = $(this).closest("form");
+    	const bbsid = form.find('input[name="bbsid"]').val();
+    	const categorytext = form.find('input[name="categorytext"]').val();
+    	alert(bbsid + "," + categorytext);
+    	$.ajax({
+    		url: "/comunity/admin/addCategory",
+    		data: {
+    			bbsid: bbsid,
+    			categorytext: categorytext,
+    			${_csrf.parameterName} : "${_csrf.token}"
+    		
+    		},
+    		success: function(res){
+    			if(res){
+    				alert("카테고리가 등록 되었습니다,");
+    			}else{
+    				alert("문제가 발생했습니다.");
+    			}
+    		},
+    		error: function(error){
+    			alert("문제가 발생했다.")
+    		}
+    	});
+    	
+    });
+
+    $(".delCate").click(function(){
+    	
+    });
+    
   });
 </script>
 <h1 class="text-center mb-4">관리자 모드</h1>
@@ -124,15 +156,28 @@
 	              					<input type="text" name="categorytext" class="form-control" placeholder="카테고리이름" style="max-width:100%;" />
 	              					<div class="input-group-append">
 	              						<button class="btn btn-danger" type="button">Cancel</button>
-	              						<button class="btn btn-primary" type="button">OK</button>
+	              						<button class="btn btn-primary addCate" type="button">카테고리등록</button>
 	              					</div>
 	              				</div>
               				</form>
               				<form action="">
               					<input type="hidden" name="bbsid" value="${list.id}" />
               					<ul class="sortable">
-              					<c:forEach var="cate" items="${categoryList }">
-								  <li class="ui-state-default" id="${cate.id}"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${cate.categorytext} </li>
+              					<c:forEach var="categoryList" items='${categoryList}'>
+								  <li class="ui-state-default d-flex">
+								  	<div class="col-1">
+								  		${categoryList.categorynum}
+								  	</div>
+								  	<div class="col-8">
+								  		<input type="text" name="categorytext[]" value="${categoryList.categorytext} " class="form-control categorylist"/>
+								  		<input type="hidden" name="bbsid[]" value="${categoryList.bbsid}" />
+								  		<input type="hidden" name="id[]" value="${categoryList.id}" />
+								  	</div>
+								  	<div class="col-4">
+								  		<button type="button" class="categoryEdit btn btn-warning editCate">수정</button>
+								  		<button type="button" class="categoryDelete btn btn-danger delCate">삭제</button>
+								  	</div>
+								  </li>
 								</c:forEach>
 								</ul>								
               				</form>

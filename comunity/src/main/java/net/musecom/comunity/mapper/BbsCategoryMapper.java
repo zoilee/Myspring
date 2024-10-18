@@ -6,8 +6,9 @@ import net.musecom.comunity.model.BbsCategory;
 
 public interface BbsCategoryMapper {
 	List<BbsCategory> selectCategoryByBbsId(int bbsid); //¸ñ·Ï
-	int insertBbsCategory(BbsCategory category);
-	int updateBbsCategory(BbsCategory category);
+	int insertCategory(BbsCategory category);
+	int updateCategory(BbsCategory category);
 	int deleteCategory(int id);
+	int selectMaxCategorynum(int bbsId);
 	
 }

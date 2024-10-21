@@ -42,4 +42,9 @@
   <delete id="deleteBbsAdmin" parameterType="int">
   	DELTE from bbs_admin where id = #{id}
   </delete>
+  
+  <!--  category -->
+  <select id="selectCategoryByBbsId" parameterType="int" resultType="BbsCategory">
+  	SELECT * FROM category WHERE bbsid = #{id};
+  </select>
 </mapper>

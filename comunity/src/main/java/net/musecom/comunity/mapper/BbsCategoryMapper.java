@@ -1,14 +1,12 @@
 package net.musecom.comunity.mapper;
 
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 
 import net.musecom.comunity.model.BbsCategory;
 
+@Mapper
 public interface BbsCategoryMapper {
-	List<BbsCategory> selectCategoryByBbsId(int bbsid); //¸ñ·Ï
-	int insertCategory(BbsCategory category);
-	int updateCategory(BbsCategory category);
-	int deleteCategory(int id);
-	int selectMaxCategorynum(int bbsId);
-	
+	int insertCategory (BbsCategory category);
+	int deleteCategory (int id);
+	int updateCategory (BbsCategory category);
 }

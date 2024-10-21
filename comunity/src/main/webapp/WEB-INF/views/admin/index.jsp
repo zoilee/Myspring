@@ -77,15 +77,15 @@
     	const form = $(this).closest("form");
     	const bbsid = form.find('input[name="bbsid"]').val();
     	const categorytext = form.find('input[name="categorytext"]').val();
+    	const data = {
+    			bbsid: bbsid,
+    			categorytext: categorytext
+    	}
     	alert(bbsid + "," + categorytext);
     	$.ajax({
-    		url: "/comunity/admin/addCategory",
-    		data: {
-    			bbsid: bbsid,
-    			categorytext: categorytext,
-    			${_csrf.parameterName} : "${_csrf.token}"
-    		
-    		},
+    		url: "/comunity/admin/addCategory?${_csrf.parameterName}=${_csrf.token}",
+    		data: JSON.stringify(data),
+    		contentType: 'application/json;charset=UTF=8',
     		success: function(res){
     			if(res){
     				alert("카테고리가 등록 되었습니다,");
@@ -163,7 +163,8 @@
               				<form action="">
               					<input type="hidden" name="bbsid" value="${list.id}" />
               					<ul class="sortable">
-              					<c:forEach var="categoryList" items='${categoryList}'>
+              					<c:if test="${not empty list.bbsCategory}">
+              					<c:forEach var="categoryList" items='${list.bbsCategory}'>
 								  <li class="ui-state-default d-flex">
 								  	<div class="col-1">
 								  		${categoryList.categorynum}
@@ -179,6 +180,7 @@
 								  	</div>
 								  </li>
 								</c:forEach>
+								</c:if>
 								</ul>								
               				</form>
               			</div>

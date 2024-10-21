@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.musecom.comunity.mapper.BbsCategoryMapper">
+	<delete id="deleteCategory" parameterType='int'>
+		DELETE FROM category WHERE id=#{id}
+	</delete>
+	
+	<update id="updateCategory" parameterType="BbsCategory">
+		UPDATE category SET
+			categorytext = #{categorytext},
+			categorynum = #{categorynum}
+		WHERE
+			id=#{id}	
+	</update>
+	<insert id="insertCategory" parameterType="BbsCategory">
+		INSERT INTO category
+		(bbsid, categorytext, categorynum)
+		SELECT #{bbsid}, #{categorytext}, COALESCE(MAX(categorynum), 0) + 1
+		FROM category
+		WHERE bbsid = #{bbsid}
+	</insert>
+	
+	
+</mapper>

@@ -9,8 +9,9 @@ import net.musecom.comunity.model.MemberRole;
 
 @Mapper
 public interface MemberMapper {
-   Member getMemberUserId(String userid); //아이디 가져오기
-   void setInsertMember(Member member); 
+   Member getMemberUserId(String userid);  
+   List<MemberRole> getMemberRole(int membersid); 
+   
+   void setInsertMember(Member member);
    void setInsertRole(MemberRole memberRole);
-   List<MemberRole> getMemberRole(int membersid); //아이디 번호로 role 가져오기
 }

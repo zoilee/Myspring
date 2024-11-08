@@ -6,7 +6,7 @@ import net.musecom.comunity.model.BbsCategory;
 
 @Mapper
 public interface BbsCategoryMapper {
-	int insertCategory (BbsCategory category);
-	int deleteCategory (int id);
-	int updateCategory (BbsCategory category);
+   int insertCategory(BbsCategory category);
+   int deleteCategory(int id);
+   int updateCategory(BbsCategory category);
 }

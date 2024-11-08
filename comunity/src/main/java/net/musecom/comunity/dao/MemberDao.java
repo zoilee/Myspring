@@ -2,8 +2,6 @@ package net.musecom.comunity.dao;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import net.musecom.comunity.model.Member;
 import net.musecom.comunity.model.MemberRole;
 

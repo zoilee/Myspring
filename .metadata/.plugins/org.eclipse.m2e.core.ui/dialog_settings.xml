@@ -13,6 +13,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -46,10 +47,10 @@
 			<item value="com.zoile"/>
 		</list>
 		<list key="name">
-			<item value="kdtcom"/>
 		</list>
 		<list key="artifactId">
-			<item value="zoilecom"/>
+			<item value="simpleCRUD1"/>
+			<item value="simpleCRUD"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

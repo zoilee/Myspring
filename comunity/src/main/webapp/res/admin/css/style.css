@@ -1,344 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css');
 body{
-    font-family: 'Noto Sans KR', sans-serif;
-    background:#eee;
+    margin:0;
     font-size:16px;
+    font-family: "Noto Sans KR", sans-serif;
+    background-color:#eff2f6;
 }
 
-header{
-    top:20px;
-    left:0;
-    width:300px;
-    background:#fff;
-    padding:50px 30px;
-    height:calc(100% - 30px);
+.modal-grade{
+    max-height:450px;
+    overflow-y: auto;
 }
-.logo img{
-    max-width:100%;
-}
-.login{
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:20px;
-    margin:40px 0 10px;
-    background:#eee;
-}
-.login input{
-    margin-bottom:15px;
-}
-.pl-300{
-    padding-left:320px;
-    padding-top:20px;
-}
-.comu-box{
-    background:#fff;
-    padding:20px;
-    margin-bottom:30px;
-    height:423px;
-}
-.comu-box h2{
-    border-bottom:1px solid #ddd;
-    font-size:18px;
-    font-weight:700;
-    padding-bottom:5px;
-    margin-bottom:15px;
-}
-.picture img{
-    max-width:100%;
-    filter:blur(1px);
-    transition: all 300ms;
-}
-.picture a:hover img{
-    filter:blur(0);
-    transform: scale(1.2);
-}
-.picture{
-    position:relative;
-    display:block;
-    overflow:hidden;
-}
-.txt-box{
-    position:absolute;
-    width:100%;
-    height:50px;
-    background:rgba(0,0,0,0.5);
-    color:#fff;
-    left:0;
-    bottom:0;
-    padding:15px;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-/**** 怨듭��궗�빆 ****/
-.noticeul li{
-    padding:8px 10px;
-    display:flex;
-    justify-content: space-between;
-    border-bottom:1px dashed #ddd;
-    transition: all 300ms;
- }
- .noticeul li:hover{
-    background:#ddd;
- }
- .noticeul li a{
-    color:#333;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
- }
-span.notice{
-    padding:1px 15px;
-    margin-right:10px;
-    color:#fff;
-    border-radius:5px;
-    display:inline-block;
-    width: 86px;
-    text-align:center;
-  }
-  .notice1{
-      background:#e7717d;
-  }
-  .notice2{
-      background:#45a29e;
-  }
-  .notice3{
-      background:#123c69;
-  }
-  .notice4{
-      background:#8e8d8a;
-  }
-span.date{
-    float:right;
-}
-.blank{
-    display:inline-block;
-    width:20px;
-    height:10px;
-}
-
-a.blogs{
-    display:flex;
-    color:#333;
-    align-items: center;
-    padding-bottom:15px;
-    margin-bottom:15px;
-    border-bottom:1px dashed #ddd;
-}
-.blogs .thumb{
-    width:80px;
-    height:80px;
-}
-.blogs .thumb img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-.blog-text{
-    width:calc(100% - 80px);
-    padding-left:20px;
-    height:90px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    line-height:1.3;
-}
-.blog-text h3{
-    font-size:18px;
-    font-weight:600;
-}
-
-
-/*************** �쉶�썝媛��엯 ***************/
-.rg{
-	margin-bottom:30px !important;
-}
-.registerul{
-	padding:20px 40px;
-}
-
-/****************** �븘�씠�뵒, 鍮꾨�踰덊샇 李얘린 ************/
-.rg.findidpass{
-	padding-bottom:50px;
-}
-#findidform, #findpwdform{
-	margin:30px 50px 50px;
-	padding:50px;
-	border:1px solid #ddd;
-}
-
-footer{
-    padding:20px 30px;
-    background:#666;
-    color:#fff;
-}
-@media (min-width: 1200px) {
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-        max-width: 1340px;
-    }
-}
-
-
-/********************* admin list ************/
-.memtable{
-	font-size:14px;
-}
-.memtable th{
-	text-align:center;
-	font-weight:600;
-}
-
-/****************** BBS ******************/
-.bbs{
-	padding:30px 50px !important;
-	margin-bottom:50px;
-}
-
-/************ LIST **************/
-.bbslist{
-	width:100%;
-	max-width:865px;
-	border-bottom:2px solid #333;
-	margin-bottom:40px;
-}
-.search-and-button{
-	width:100%;
-	max-width:895px;
-	margin: 0px -15px 40px;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-}
-.bbslist a{
-	color:#212529;
-	text-decoration:none;
-}
-.bbslist th{
-	padding-top:10px;
-	padding-bottom:10px;
-	border-top: 1px solid #999;
-	border-bottom: 2px solid #666;
-	text-align:center;
-	position:relative;
-}
-
-.bbslist th:not(:last-child)::after{
-	content:"";
-	display:block;
-	width:1px;
-	height:15px;
-	background:#999;
-	position:absolute;
-	top: 15px;
-	right:0;
-}
-.bbslist td{
-	padding:15px;
-	border-bottom:1px solid #999;
-}
-.bbslist td.ellipsis{
-	white-space:nowrap;
-	overflow:hidden;
-	text-overflow:ellipsis;
-}
-
-/*************** write **************/
-.w-label{
-	width:100px;
-	padding-right:30px;
-	text-align:right;
-}
-.w-label+input,
-.w-label+textarea{
-	width: calc(100% - 200px);
-}
-.w-label+textarea{
-	height: 200px;
-}
-
-
-/********** view **************/
-section.view{
-	background:#ddd;
-	padding:10px;
-	border-radius:5px;
-	position:relative;
-		
-}
-.view-box{
-	background:#fff;
-	min-height:600px;
-	border-radius:5px;
-	
-	
-}
-.view-head{
-	pading:20px 30px;
-	border-bottom:1px solid #ddd;
-	font-size:18px;
-	font-weight:600;
-}
-.view-head i{
-	margin-right:15px;
-}
-.contents-box{
-	display:flex;	
-	font-size:14px;
-	padding:10px 30px 50px;
-}
-.contents-box div{
-	padding-right:40px;
-	position:relative;
-}
-.contents-box div::after{
-	content:"";
-	display:block;
-	background:#999;
-	width:1px;
-	height:8px;
-	top:5px;
-	right:20px;
-	position:absolute;
-}
-.contents-box i{
-	margin-right:15px;
-}
-.view-box .contents{
-	padding: 0 30px 50px;
-}
-
-.view .view-foot{
-	position:absolute;
-	width:100%;
-	padding:40px;
-	text-align:right;
-	bottom:0;
-	
-}
-
-/****** passbox ********/
-.pass-box{
-	text-align:center;
-	padding:50px 50px 100px;
-}
-.pass-box p{
-	margin-bottom:50px;
-	color:red;
-}
-.bbspass{
-	width:50%;
-	padding:40px;
-	margin:auto;
-	background:#ddd;
-}
-.bbspass>.password{
-	margin-bottom:40px;
-}
-/******* admin *******/
 .comtable{
 	font-size:14px;
 }
 .comtable input{
 	max-width:40px;
+}
+.comtable input.categoryList{
+	max-width:100%;
 }
 .comtable input.bbstitle{
 	max-width:100px;
@@ -347,13 +27,8 @@ section.view{
 .comtable td{
 	text-align:center;
 }
-input[type=text],
-select{
-	width:80px;
-}
-.comtable input.categorylist{
-	max-width:100%;
-	width:200px;
+.comtable select{
+   max-width:100%;
 }
 ul.sortable{
 	list-style-type:none;
@@ -361,38 +36,17 @@ ul.sortable{
 ul.sortable li{
 	padding-top:5px;
 	padding-bottom:5px;
-	display:flex;
 }
 
-/****** paging *****/
-/* my work
-        #table{
-            list-style:none;
-            width:800px;
-            margin:100px auto;
-            justify-content:center;
-            display:flex;
-        }
-        #table li{
-            width:40px;
-            height:40px;
-            text-align:center;
-            line-height:40px;
-            border:1px solid #333;
-            border-right:none;
-            cursor:pointer;
-        }
-        #table li:last-child{
-            border-right:1px solid #333;
-        }
-        #table li:hover{
-            background:#ddd;
-        }
-        .active {
-            background: #333;
-            color: #fff;
-        }
-        .hidden {
-            display:none;
-        }
-*/
+.uploadbox{
+	border:1px solid #ccc;
+	background:#ededed;
+	padding:20px;
+}
+.uploadinbox{
+	padding:20px;
+	background:#fff;
+}
+.upfile{
+	display:none;
+}

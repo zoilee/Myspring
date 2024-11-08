@@ -1,0 +1,4 @@
+com\zoile\simple\model\User.class
+com\zoile\simple\HomeController.class
+com\zoile\simple\controller\UserController.class
+com\zoile\simple\mapper\UserMapper.class

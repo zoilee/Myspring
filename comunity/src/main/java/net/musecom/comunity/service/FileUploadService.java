@@ -9,18 +9,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import net.musecom.comunity.model.FileDto;
+
 @Service
 public class FileUploadService implements FileUpload {
 	
-	//È®ÀåÀÚ¸ñ·Ï, ÆÄÀÏÁ¦ÇÑÅ©±â ÇÊµå ¼³Á¤
 	private String[] allowedExt;
 	private long maxSize;
 	
-	//ÀúÀå°æ·Î ÇÊµå
 	private String path;
 	private String orPath;
 	
-	//½áºí¸´ ÄÜÅØ½ºÆ® ºó¿¡¼­ ²¨³×±â
+	private String fileExt;
+	private long fileSize;
+	
+	private FileDto fileDto = new FileDto();
+	
 	@Autowired
 	private ServletContext sc;
 
@@ -36,7 +40,8 @@ public class FileUploadService implements FileUpload {
 
 	@Override
 	public void setMaxSize(long maxSize) {
-        this.maxSize = maxSize;
+		//maxSize ê°€ 0ì´ë©´ ê¸°ë³¸ê°’ 2MB ì„¤ì •
+        this.maxSize = (maxSize > 0) ? maxSize : 2 * 1024 * 1024;
 	}
 
 	@Override
@@ -48,6 +53,12 @@ public class FileUploadService implements FileUpload {
 	public void setAbsolutePath(String path) {
 		this.path =sc.getRealPath("/res/upload/") + path + "/";
 		this.orPath = path;
+		System.out.println(this.path);
+		//ë””ë ‰í† ë¦¬ê°€ ì—†ì„ ê²½ìš° ìƒì„±í•œë‹¤.
+		File dir = new File(this.path);
+		if(!dir.exists()) {
+			dir.mkdirs();
+		}
 	}
 
 	@Override
@@ -56,7 +67,6 @@ public class FileUploadService implements FileUpload {
 	}
 
 	
-	//ÆÄÀÏ È®ÀåÀÚ ÀÌ¸§ °¡Á®¿À´Â ÇÔ¼ö
 	@Override
 	public String getFileExt(String filename) {
 		if(filename == null || filename.isEmpty()) {
@@ -66,44 +76,49 @@ public class FileUploadService implements FileUpload {
 		return (dotIndex != -1 && dotIndex < filename.length() - 1) ? filename.substring(dotIndex + 1) :"";
 	}
 	
-	//ÆÄÀÏ¾÷·Îµå Ã³¸®
-	public String[] uploadFile(MultipartFile file) throws IOException {
+	public FileDto uploadFile(MultipartFile file) throws IOException {
 		
-		String fileExt = getFileExt(file.getOriginalFilename());
+		fileExt = getFileExt(file.getOriginalFilename());
+		fileSize = file.getSize();
 		
 		if(file == null || file.isEmpty()) {
-			throw new IllegalArgumentException("ÆÄÀÏÀÌ ¾ø½À´Ï´Ù.");
+			throw new IllegalArgumentException("ì„ íƒëœ íŒŒì¼ì´ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		
-		//ÆÄÀÏÅ©±â Ã¼Å©
+
 		if(maxSize > 0 && file.getSize() > maxSize) {
-			throw new IllegalArgumentException("ÆÄÀÏ Å©±â´Â " + maxSize + "º¸´Ù ÀÛ¾Æ¾ß ÇÕ´Ï´Ù.");
+			throw new IllegalArgumentException("íŒŒì¼ì—…ë¡œë“œ ì œí•œìš©ëŸ‰ " + maxSize + "ë¥¼ ì´ˆê³¼í–ˆìŠµë‹ˆë‹¤.");
 		}
 		
 		if(allowedExt != null && allowedExt.length > 0) {
 			boolean isFileOk = false;
 			for(String ext : allowedExt) {
-				if(fileExt.equals(ext)) {
+				if(fileExt.equalsIgnoreCase(ext)) {  //ëŒ€ì†Œë¬¸ì ìƒê´€ì—†ì´ ë¹„êµ
 					isFileOk = true;
 					break;
 				}
 			}
 			
 			if(!isFileOk) {
-				throw new IllegalArgumentException("Çã¿ëµÇÁö ¾Ê´Â È®ÀåÀÚ ÀÔ´Ï´Ù.");
+				throw new IllegalArgumentException("í—ˆìš©ë˜ì§€ ì•ŠëŠ” í™•ì¥ì." + fileExt);
 			}
+			
 		}
 		
-		//ÀúÀå°æ·Î + ÆÄÀÏÀÌ¸§
+
 		String orFilename = file.getOriginalFilename();
 		String newFilename = System.currentTimeMillis() + "-"+ orPath +"." + fileExt;
 		File dest = new File(path, newFilename);
 		
-		//ÆÄÀÏÀúÀå
+		fileDto.setNewfilename(newFilename);
+		fileDto.setOrfilename(orFilename);
+		fileDto.setExt(fileExt);
+		fileDto.setFilesize(fileSize);
+ 
 		file.transferTo(dest);
-		String[] filesname = {orFilename, newFilename};
 		
-		return filesname;
+		
+		return fileDto;
 	}
 
 }

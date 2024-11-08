@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="sortable"/>
+		<item key="selection" value="num--"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="sortable"/>
-			<item value="categoryList"/>
-			<item value="category"/>
-			<item value="categorytext"/>
-			<item value="addCate"/>
-			<item value="등록"/>
-			<item value="sort"/>
-			<item value="thimgsize"/>
-			<item value="editBbsAdmin"/>
-			<item value="bu"/>
-			<item value="sub"/>
-			<item value="Bc"/>
-			<item value="cypt"/>
-			<item value="cr"/>
-			<item value="cryp"/>
+			<item value="num--"/>
+			<item value="num"/>
+			<item value="fname"/>
+			<item value="f.name"/>
+			<item value="totalRecord"/>
+			<item value="회원"/>
+			<item value="form"/>
+			<item value="searchbutton"/>
+			<item value="newfileanme"/>
+			<item value="field"/>
+			<item value="field "/>
+			<item value="단위"/>
+			<item value="edt"/>
+			<item value="edit"/>
+			<item value="csrf"/>
 		</list>
 		<list key="replacehistory">
 		</list>

@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
+
  <!-- 본문내용 --> 
                     <h1 class="my-4 text-center">회원가입</h1>
                     <p class="text-center text-secondary"><span class="text-danger">*</span>표시가 있는 곳은 필수 입니다.</p>
-                    <form name="register" id="register" action="register?${_csrf.parameterName}=${_csrf.token}" method="post" enctype="multipart/form-data">
+          
+                    <form name="register" id="register" action="register?${_csrf.parameterName }=${_csrf.token }" method="post" enctype="multipart/form-data">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
                                 <div class="row">
@@ -96,8 +98,8 @@
                             <button class="btn btn-danger mr-2 px-4">취소</button>
                             <button class="btn btn-primary ml-2 px-4">전송</button>
                         </div>
-                        <input type="hidden" name="role" value="ROLE_USER"/>
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+                        <input type="hidden" name="role" value="ROLE_USER" />
+                        
                     </form>
                     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
                     <script>

@@ -13,10 +13,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import net.musecom.comunity.dao.MemberDao;
+import net.musecom.comunity.model.FileDto;
 import net.musecom.comunity.model.Member;
 import net.musecom.comunity.model.MemberRole;
 import net.musecom.comunity.service.ClientIpAddress;
 import net.musecom.comunity.service.FileUploadService;
+import net.musecom.comunity.service.InstargramParser;
 
 @Controller
 public class MainController {
@@ -33,6 +35,7 @@ public class MainController {
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
+	private FileDto fileDto = new FileDto();
 	
 	@GetMapping("/register")
 	public String Register(Model model) {
@@ -57,13 +60,13 @@ public class MainController {
 			RedirectAttributes redirectAttributes
 			) {
 		
-		if(zipcode == null) {zipcode = 0; } //int°¡ ºñ¾úÀ» ¶§ Ã³¸®
+		if(zipcode == null) {zipcode = 0; } 
 		
 		Member dto = new Member();
 		MemberRole rdto = new MemberRole();
-		//¾ÆÀÌÇÇ ÁÖ¼Ò
+
 		clientIpAddress.setClientIpAddress(request);
-		//ºñ¹Ğ¹øÈ£ ¾ÏÈ£È­
+	
 		String userpass = passwordEncoder.encode(noopuserpass);
 		
 		String userip = clientIpAddress.getClientIpAddress();
@@ -80,18 +83,17 @@ public class MainController {
 		dto.setUserprofile(userprofile);
 		dto.setUserip(userip);
 		
-		//ÆÄÀÏ¾÷·Îµå Ã³¸®
 		if(userimg != null && !userimg.isEmpty()) {
 			try {
 			 
-			  fileUpload.setAbsolutePath("members");  //ÆÄÀÏ°æ·Î¼ÂÆÃ
+			  fileUpload.setAbsolutePath("members"); 
 			  String[] exts = {"jpg", "gif", "png"};
-			  fileUpload.setAllowedExt(exts); //Çã¿ëÇÏ´Â È®ÀåÀÚ ¼ÂÆÃ
-			  long maxSize = 1 * 1024 * 1024; //ÃÖ´ë 1¸Ş°¡
+			  fileUpload.setAllowedExt(exts); 
+			  long maxSize = 1 * 1024 * 1024; 
 			  fileUpload.setMaxSize(maxSize);
-			  String[] fnames = fileUpload.uploadFile(userimg);
-			  dto.setOruserimg(fnames[0]);
-			  dto.setUserimg(fnames[1]);
+			  fileDto = fileUpload.uploadFile(userimg);
+			  dto.setOruserimg(fileDto.getOrfilename());
+			  dto.setUserimg(fileDto.getNewfilename());
 			  
 			}catch(Exception e) {
 				redirectAttributes.addFlashAttribute("error", e.getMessage());
@@ -101,35 +103,38 @@ public class MainController {
 		
 		dao.insertMem(dto);
 		
-		//primary key auto increment °ª ¾ò±â
-		int membersid= dto.getId();
+		//primary key auto increment 
+		int membersid = dto.getId();
 		
 		rdto.setMembersid(membersid);
 		rdto.setUserRole(role);
 		
 		dao.insertMemRole(rdto);
-		
-		//redirect ÀÏ‹š Á¤º¸ Àü´Ş ¹æ¹ı
+				
+		//redirect ì¼ë•Œ ì •ë³´ ì „ë‹¬ ë°©ë²•
 		redirectAttributes.addFlashAttribute("memberok", "ok");
 		
 		return "redirect:/";
 	}
 	
-	@GetMapping("/login")
-	public String loginForm(@RequestParam(value="error", required=false) String error, Model model) {
-		if(error != null) {
-			model.addAttribute("errorMessage", "¾ÆÀÌµğ ¶Ç´Â ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.");
-		}
-		return "login";
-	}
-	
-
-	
+//	@GetMapping("/login")
+//    public String LoginForm(@RequestParam(value="error", required=false) String error, Model model) {
+//		if(error != null) {
+//			model.addAttribute("errorMessage", "ì•„ì´ë”” ë˜ëŠ” ë¹„ë°€ë²ˆí˜¸ê°€ í‹€ë ¸ìŠµë‹ˆë‹¤.");
+//		}
+//		return "login";
+//	}
+//	
 	
 	@GetMapping("/member")
 	public String memberIndex(Model model) {
 		return "member.index";
 	}
 	
-
+	 @GetMapping("/insta")
+	   public String instagram(@RequestParam("instaid") String instaid, Model model ) {
+	      InstargramParser instgramParser = new InstargramParser();
+	      model.addAttribute("inst", instgramParser.getStringText(instaid));
+	      return "main.insta";
+	   }
 }

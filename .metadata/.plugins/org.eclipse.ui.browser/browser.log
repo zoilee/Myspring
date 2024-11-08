@@ -3222,3 +3222,149 @@
 10월 21, 2024 18:29:46.87 [16860:9464:1021/182946.087:ERROR:CONSOLE(1)] "Unknown VE context: tab-427", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 10월 21, 2024 18:29:46.90 [16860:9464:1021/182946.089:ERROR:CONSOLE(1)] "Unknown VE context: tab-428", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 10월 21, 2024 18:43:15.420 [16860:9464:1021/184315.420:ERROR:interface_endpoint_client.cc(725)] Message 5 rejected by interface blink.mojom.WidgetHost
+
+10월 24, 2024 15:27:12.307 NEW SESSION
+10월 24, 2024 15:27:12.307 [3188:12404:1024/152712.307:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 15:27:12.572 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 24, 2024 15:27:41.847 [3188:12404:1024/152741.847:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 15:28:33.173 [3188:12404:1024/152833.172:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 15:30:02.265 [3188:12404:1024/153002.265:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 24, 2024 15:34:01.376 [3188:12404:1024/153401.376:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+
+10월 24, 2024 15:38:52.711 NEW SESSION
+10월 24, 2024 15:38:52.711 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 25, 2024 09:38:19.524 NEW SESSION
+10월 25, 2024 09:38:19.524 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 25, 2024 12:04:27.836 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 25, 2024 12:26:38.498 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 28, 2024 12:49:23.821 NEW SESSION
+10월 28, 2024 12:49:23.821 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+10월 30, 2024 09:42:25.835 NEW SESSION
+10월 30, 2024 09:42:25.835 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+11월 04, 2024 17:52:17.275 NEW SESSION
+11월 04, 2024 17:52:17.275 Created TensorFlow Lite XNNPACK delegate for CPU.
+
+11월 05, 2024 16:05:02.75 NEW SESSION
+11월 05, 2024 16:05:02.76 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 05, 2024 16:52:12.554 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: Fetch 諛� XHR    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.556     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.556     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.556     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.557     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.557     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.557     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.558 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: 臾몄꽌    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.558     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.558     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.558     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.559     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.559     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.559     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.559 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: 湲�瑗�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.559     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.560     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.560     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.560     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.560     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.561     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.561 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: �씠誘몄�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.561     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.561     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.562     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.562     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.562     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.562     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.563 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: 誘몃뵒�뼱    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.563     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.563     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.564     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.564     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.564     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.565     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.565 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: 留ㅻ땲�럹�뒪�듃    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.565     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.566     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.566     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.567     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.567     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.567     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:12.568 [10220:16124:1105/165212.554:ERROR:CONSOLE(1)] "Unknown VE context: 湲고�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 05, 2024 16:52:12.568     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 05, 2024 16:52:12.568     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 05, 2024 16:52:12.568     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 05, 2024 16:52:12.569     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 05, 2024 16:52:12.569     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 05, 2024 16:52:12.569     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 05, 2024 16:52:13.86 [10220:16124:1105/165213.085:ERROR:CONSOLE(1)] "Unknown VE context: Fetch諛뢝HR    at a (devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js:1:64099)
+11월 05, 2024 16:52:13.87     at e.Me (devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js:1:81107)
+11월 05, 2024 16:52:13.88     at devtools://devtools/bundled/devtools-frontend/front_end/ui/components/render_coordinator/render_coordinator.js:1:150", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+
+11월 06, 2024 14:52:59.14 NEW SESSION
+11월 06, 2024 14:52:59.14 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 06, 2024 15:15:05.687 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 06, 2024 16:14:55.457 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 06, 2024 16:16:01.436 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 06, 2024 16:23:45.966 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: Fetch 諛� XHR    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.967     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.967     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.967     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.968     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.968     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.969     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.969 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: 臾몄꽌    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.969     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.969     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.969     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.970     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.970     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.970     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.970 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: 湲�瑗�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.970     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.971     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.971     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.971     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.971     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.971     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.972 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: �씠誘몄�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.972     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.972     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.972     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.972     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.972     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.973     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.973 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: 誘몃뵒�뼱    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.973     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.973     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.973     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.974     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.974     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.974     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.975 [20080:4336:1106/162345.966:ERROR:CONSOLE(1)] "Unknown VE context: 留ㅻ땲�럹�뒪�듃    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.975     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.975     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.975     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.975     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.981     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.982     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:45.982 [20080:4336:1106/162345.967:ERROR:CONSOLE(1)] "Unknown VE context: 湲고�    at _r.addBit (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:10984)
+11월 06, 2024 16:23:45.982     at new _r (devtools://devtools/bundled/devtools-frontend/front_end/ui/legacy/legacy.js:3:9730)
+11월 06, 2024 16:23:45.983     at new Fi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:203798)
+11월 06, 2024 16:23:45.983     at new Yi (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:263255)
+11월 06, 2024 16:23:45.983     at Yi.instance (devtools://devtools/bundled/devtools-frontend/front_end/panels/network/network.js:1:265650)
+11월 06, 2024 16:23:45.983     at Object.loadView (devtools://devtools/bundled/devtools-frontend/front_end/entrypoints/devtools_app/devtools_app.js:1:18265)
+11월 06, 2024 16:23:45.984     at async Promise.all (index 1)", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+11월 06, 2024 16:23:46.430 [20080:4336:1106/162346.430:ERROR:CONSOLE(1)] "Unknown VE context: Fetch諛뢝HR    at a (devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js:1:64099)
+11월 06, 2024 16:23:46.431     at e.Me (devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js:1:81107)
+11월 06, 2024 16:23:46.431     at devtools://devtools/bundled/devtools-frontend/front_end/ui/components/render_coordinator/render_coordinator.js:1:150", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+
+11월 07, 2024 16:45:43.486 NEW SESSION
+11월 07, 2024 16:45:43.486 Created TensorFlow Lite XNNPACK delegate for CPU.
+11월 07, 2024 17:15:23.763 [16732:452:1107/171523.762:ERROR:interface_endpoint_client.cc(725)] Message 0 rejected by interface blink.mojom.WidgetHost
+
+11월 08, 2024 17:58:53.976 NEW SESSION
+11월 08, 2024 17:58:53.976 [10412:19092:1108/175853.973:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+11월 08, 2024 17:58:56.452 Created TensorFlow Lite XNNPACK delegate for CPU.

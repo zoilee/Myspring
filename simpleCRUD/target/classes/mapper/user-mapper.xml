@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zoile.simple.mapper.UserMapper">
+
+     <!-- 모든 사용자 조회 -->
+    <select id="getAllUsers" resultType="com.zoile.simple.model.User">
+        SELECT * FROM users
+    </select>
+
+    <!-- ID로 사용자 조회 -->
+    <select id="getUserById" parameterType="int" resultType="com.zoile.simple.model.User">
+        SELECT * FROM users WHERE id = #{id}
+    </select>
+
+    <!-- 사용자 추가 -->
+    <insert id="insertUser" parameterType="com.zoile.simple.model.User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO users (username, email) VALUES (#{username}, #{email})
+    </insert>
+
+    <!-- 사용자 삭제 -->
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM users WHERE id = #{id}
+    </delete>
+
+    <!-- 사용자 업데이트 -->
+    <update id="updateUser" parameterType="com.zoile.simple.model.User">
+        UPDATE users SET username = #{username}, email = #{email} WHERE id = #{id}
+    </update>
+
+</mapper>

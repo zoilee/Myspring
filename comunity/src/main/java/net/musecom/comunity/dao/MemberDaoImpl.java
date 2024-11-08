@@ -44,6 +44,5 @@ public class MemberDaoImpl implements MemberDao {
 	public void insertMemRole(MemberRole rdto) {
 		mem.setInsertRole(rdto);
 	}
-	
 
 }

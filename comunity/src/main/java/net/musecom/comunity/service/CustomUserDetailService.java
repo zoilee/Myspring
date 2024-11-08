@@ -6,14 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
 
 import net.musecom.comunity.mapper.MemberMapper;
 import net.musecom.comunity.model.CustomUserDetails;
 import net.musecom.comunity.model.Member;
 import net.musecom.comunity.model.MemberRole;
 
-@Service
 public class CustomUserDetailService implements UserDetailsService {
 
 	@Autowired
@@ -21,14 +19,13 @@ public class CustomUserDetailService implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
+		
 		Member member = memberMapper.getMemberUserId(username);
 		if(member == null) {
-			throw new UsernameNotFoundException("È¸¿ø Á¤º¸°¡ ¾ø½À´Ï´Ù.");
+			throw new UsernameNotFoundException("íšŒì›ì •ë³´ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}
 		List<MemberRole> roles = memberMapper.getMemberRole(member.getId());
-		
-		
+	
 		return new CustomUserDetails(member, roles);
 	}
 

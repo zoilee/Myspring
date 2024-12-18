@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="com.zoile.kdtcom.controller.service.ClientIpAddress"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.test.context.junit4.SpringJUnit4ClassRunner"/>
@@ -8,7 +7,6 @@
     <fullyQualifiedTypeName name="org.springframework.test.web.servlet.setup.MockMvcBuilders"/>
     <fullyQualifiedTypeName name="com.zoile.kdtcom.model.MemberDto"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.MemberRole"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.userdetails.UserDetails"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.model.CustomUserDetails"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
@@ -19,11 +17,7 @@
     <fullyQualifiedTypeName name="com.zoile.simple.model.User"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.service.BbsAdminService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-    <fullyQualifiedTypeName name="net.musecom.comunity.model.BbsAdmin"/>
     <fullyQualifiedTypeName name="org.springframework.security.core.Authentication"/>
-    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
-    <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
-    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
     <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
     <fullyQualifiedTypeName name="com.google.gson.JsonParser"/>
@@ -35,8 +29,35 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="net.musecom.comunity.mapper.FileMapper"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
-    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
     <fullyQualifiedTypeName name="org.jsoup.nodes.Element"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.BbsAdmin"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="org.springframework.security.core.context.SecurityContextHolder"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.Member"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="java.sql.Timestamp"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.model.FileDto"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.util.Paging"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="com.google.firebase.FirebaseApp"/>
+    <fullyQualifiedTypeName name="com.google.firebase.cloud.FirestoreClient"/>
+    <fullyQualifiedTypeName name="com.google.cloud.firestore.CollectionReference"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="com.zoile.firebase.dto.User"/>
+    <fullyQualifiedTypeName name="com.google.api.core.ApiFuture"/>
+    <fullyQualifiedTypeName name="com.google.cloud.firestore.QuerySnapshot"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.google.cloud.firestore.DocumentReference"/>
+    <fullyQualifiedTypeName name="com.google.cloud.firestore.DocumentSnapshot"/>
+    <fullyQualifiedTypeName name="com.google.cloud.firestore.WriteResult"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="net.musecom.comunity.mapper.MemberMapper"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ViewResolverRegistry"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.view.tiles3.TilesViewResolver"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 </qualifiedTypeNameHistroy>

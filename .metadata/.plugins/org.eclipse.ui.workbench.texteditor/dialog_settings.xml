@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="num--"/>
+		<item key="selection" value="message"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="num--"/>
-			<item value="num"/>
-			<item value="fname"/>
-			<item value="f.name"/>
-			<item value="totalRecord"/>
-			<item value="회원"/>
-			<item value="form"/>
-			<item value="searchbutton"/>
-			<item value="newfileanme"/>
-			<item value="field"/>
-			<item value="field "/>
-			<item value="단위"/>
-			<item value="edt"/>
-			<item value="edit"/>
-			<item value="csrf"/>
+			<item value="message"/>
+			<item value="message-"/>
+			<item value="sendMessage"/>
+			<item value="//인기"/>
+			<item value="searchBbsPostsGrouped"/>
+			<item value="/del"/>
+			<item value="/update"/>
+			<item value="del"/>
+			<item value="/view"/>
+			<item value="attri"/>
+			<item value="파일이"/>
+			<item value="/download"/>
+			<item value="VIEW"/>
+			<item value="delete"/>
+			<item value="/"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="824"/>
-		<item key="DIALOG_Y_ORIGIN" value="268"/>
+		<item key="DIALOG_X_ORIGIN" value="1173"/>
+		<item key="DIALOG_Y_ORIGIN" value="225"/>
 		<item key="DIALOG_WIDTH" value="288"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>

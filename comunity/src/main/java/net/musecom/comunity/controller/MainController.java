@@ -1,5 +1,9 @@
 package net.musecom.comunity.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,16 +13,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import net.musecom.comunity.dao.MemberDao;
+import net.musecom.comunity.model.BbsAdmin;
 import net.musecom.comunity.model.FileDto;
 import net.musecom.comunity.model.Member;
 import net.musecom.comunity.model.MemberRole;
+import net.musecom.comunity.service.BbsAdminService;
+import net.musecom.comunity.service.BbsService;
 import net.musecom.comunity.service.ClientIpAddress;
 import net.musecom.comunity.service.FileUploadService;
 import net.musecom.comunity.service.InstargramParser;
+import net.musecom.comunity.service.MemberService;
 
 @Controller
 public class MainController {
@@ -35,11 +44,28 @@ public class MainController {
 	@Autowired
 	private BCryptPasswordEncoder passwordEncoder;
 	
+	@Autowired
+	private BbsService bbsService;
+	
+	@Autowired
+	private BbsAdminService bbsAdminService;
+	
 	private FileDto fileDto = new FileDto();
+	
+	@Autowired
+	private MemberService memberService;
 	
 	@GetMapping("/register")
 	public String Register(Model model) {
-		return "register";
+		
+		List<BbsAdmin> bbsAdminLists = bbsAdminService.getAllBbsList();
+		//인기검색어 출력
+		List<Map<String, Object>> popularKeywords = bbsService.getPopularKeyword();
+		
+		model.addAttribute("popularKeywords", popularKeywords);
+		model.addAttribute("bbsAdminLists", bbsAdminLists );		
+				
+		return "main.register";
 	}
 		
 	@PostMapping("/register")
@@ -117,24 +143,50 @@ public class MainController {
 		return "redirect:/";
 	}
 	
-//	@GetMapping("/login")
-//    public String LoginForm(@RequestParam(value="error", required=false) String error, Model model) {
-//		if(error != null) {
-//			model.addAttribute("errorMessage", "아이디 또는 비밀번호가 틀렸습니다.");
-//		}
-//		return "login";
-//	}
-//	
+	@GetMapping("/login")
+    public String LoginForm(@RequestParam(value="error", required=false) String error, Model model) {
+		if(error != null) {
+			model.addAttribute("errorMessage", "아이디 또는 비밀번호가 틀렸습니다.");
+		}
+		List<BbsAdmin> bbsAdminLists = bbsAdminService.getAllBbsList();
+		//인기검색어 출력
+		List<Map<String, Object>> popularKeywords = bbsService.getPopularKeyword();
+		
+		model.addAttribute("popularKeywords", popularKeywords);
+		model.addAttribute("bbsAdminLists", bbsAdminLists );	
+		return "main.login";
+	}
+	
 	
 	@GetMapping("/member")
 	public String memberIndex(Model model) {
+		
 		return "member.index";
 	}
 	
-	 @GetMapping("/insta")
-	   public String instagram(@RequestParam("instaid") String instaid, Model model ) {
-	      InstargramParser instgramParser = new InstargramParser();
-	      model.addAttribute("inst", instgramParser.getStringText(instaid));
-	      return "main.insta";
-	   }
+
+	@GetMapping("/insta")
+	public String instagram(@RequestParam("instaid") String instaid, Model model ) {
+		InstargramParser instgramParser = new InstargramParser();
+		model.addAttribute("insta", instgramParser.getStringText(instaid));
+		
+		List<BbsAdmin> bbsAdminLists = bbsAdminService.getAllBbsList();
+		//인기검색어 출력
+		List<Map<String, Object>> popularKeywords = bbsService.getPopularKeyword();
+		
+		model.addAttribute("popularKeywords", popularKeywords);
+		model.addAttribute("bbsAdminLists", bbsAdminLists );	
+		return "main.insta";
+	}
+	
+	
+	@PostMapping("/finduser")
+	@ResponseBody
+	public Map<String, Object> findUser(@RequestParam String userid){
+		Member member = memberService.findByUserid(userid);
+		Map<String, Object> res = new HashMap<>();
+		res.put("ext", member != null);
+		return res;
+	}
+	
 }

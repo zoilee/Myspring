@@ -3,6 +3,7 @@ package com.zoile.kdtcom.controller;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,6 +30,7 @@ public class MainController {
 	private BCryptPasswordEncoder passwordEncoder;
 	
 	@Autowired
+	@Qualifier("memberDaoImpl")
 	private MemberDao dao;
 	
 	
@@ -57,11 +59,11 @@ public class MainController {
 			@RequestParam(value="userimg", required= false) MultipartFile userimg, HttpServletRequest request, Model model) {
 			
 			MemberDto dto = new MemberDto();
-			//¾ÆÀÌÇÇ ÁÖ¼Ò ¾ò±â
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½
 			clientIpAddress.getClientIpAddress(request);
 			String userip = clientIpAddress.getClientIpAddress();
 		
-			//ºñ¹Ð¹øÈ£ ¾ÏÈ£È­
+			//ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½È£È­
 			String userpass = passwordEncoder.encode(noopUserpass);
 			
 			dto.setUserid(userid);
@@ -77,7 +79,7 @@ public class MainController {
 			dto.setUserip(userip);
 			
 		try {
-			//¾÷·Îµå Ã³¸®
+			//ï¿½ï¿½ï¿½Îµï¿½ Ã³ï¿½ï¿½
 			if(userimg != null && !userimg.isEmpty()) {
 				fileUpload.setAbsolutePath("members");
 				String[] exts = {"jpg", "gif", "png"};

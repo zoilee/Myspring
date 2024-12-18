@@ -3,6 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
 
  <!-- 본문내용 --> 
+ <div class="p-5 my-3 bg-white shadow-sm rounded">
                     <h1 class="my-4 text-center">회원가입</h1>
                     <p class="text-center text-secondary"><span class="text-danger">*</span>표시가 있는 곳은 필수 입니다.</p>
           
@@ -101,6 +102,7 @@
                         <input type="hidden" name="role" value="ROLE_USER" />
                         
                     </form>
+                </div>
                     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
                     <script>
                         function execDaumPostcode() {

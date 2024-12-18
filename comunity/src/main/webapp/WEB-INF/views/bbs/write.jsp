@@ -28,24 +28,57 @@
    const maxAllFileSize = 50000000;  //나중에 db에서 확인함
 
    $(function(){
+	 let upload= ${adminBbs.fgrade >= 0 ? 'true' : 'false'};  
+	 let insertbar = upload
+	                    ? ['insert', ['link', 'picture', 'video']]
+	                    : ['insert', ['link']];
+	 
 	 $("#content").summernote({
-		 lange: 'ko-KR',
-		 height: 350
+		 lang: 'ko-KR',
+		 height: 350,
+		 toolbar: [
+			  ['style', ['style']],
+			  ['font', ['bold', 'underline', 'clear']],
+			  ['fontname', ['fontname']],
+			  ['color', ['color']],
+			  ['para', ['ul', 'ol', 'paragraph']],
+			  ['table', ['table']],
+			  insertbar,
+			  ['view', ['fullscreen', 'codeview', 'help']],
+			],
+		 callbacks: {
+			 onImageUpload: function(files){
+				 uploadFile(files[0], true);
+			 },
+			 onMediaDelete: function(target){
+				const fileUrl = target[0].src;
+			    const relativePath = new URL(fileUrl).pathname; //상대경로로 추출
+			    console.log(relativePath);
+				$(".uploadinbox .upload-file a[href='"+relativePath+"']")
+				.closest('.upload-file')
+				.hide();
+				
+				console.log(relativePath);
+			 }
+		 }
 	 });
 	 
 	 $("#upfile").change(function(){
-		 const fileInput = $("#upfile")[0];
+		 const fileInput = $("#upfile")[0];	 
+	     if(fileInput.files.length > 0) {
+	    	 uploadFile(fileInput.files[0], true);
+	     }
+	 });
+	 
+	 
+	 //파일 업로드 함수
+	 function uploadFile(file, insertIntoEditor){
+		
 		 const formData = new FormData();
+		 formData.append('file', file);
+		 formData.append('bbsid', ${adminBbs.id});
 		 
-		 //파일 선택 확인
-		 if(fileInput.files.length > 0) {
-			formData.append('file', fileInput.files[0]);
-		    formData.append('bbsid', ${adminBbs.id});
-			const fileSize = fileInput.files[0].size;
-			//const csrfToken = $("input[name='${_csrf.parameterName }']").val();
-			//formData.append("${_csrf.parameterName }", csrfToken);
-			
-			$.ajax({
+		 $.ajax({
 				url: '/comunity/bbs/upload',
 				type: 'POST',
 				data: formData,
@@ -62,21 +95,24 @@
 				    	$("#fileIdField")
 				    	     .append('<input type="hidden" name="fileId[]" value="'+res.fileId+'">');
 
-				    	const uploadfile = '<div class="upload-file">'+ 
-						                   '<a href="'+res.fileUrl+'" target="_blank">'+res.orFileName+'</a>'+
+				    	const uploadHtml = '<div class="upload-file">'+ 
+						                   '<a href="'+res.fileUrl+'" target="_blank">'+res.orFileName+'</a> '+
+						                   '<a href="#" class="delete-file" data-file-id="'+res.fileId+'"><i class="ri-close-large-line"></i></a>'
 						                   '</div>';	
 						//업로드 박스에 링크와 파일이름 추가
-				    	$(".uploadinbox").append(uploadfile);
+				    	$(".uploadinbox").append(uploadHtml);
 						
 						//summernote에 이미지 또는 파일 추가
-						if(res.ext.toLowerCase() =='jpg' || res.ext.toLowerCase() == 'png' || res.ext.toLowerCase() == 'gif' || res.ext.toLowerCase()=='svg'){
-							$('#content').summernote('insertImage', res.fileUrl);
-						}else{
-							$('#content').summernote('createLink', {
-								text: res.orFileName,
-								url: res.fileUrl,
-								isNewWindow: true
-							});
+						if(insertIntoEditor){
+							if(res.ext.toLowerCase() =='jpg' || res.ext.toLowerCase() == 'png' || res.ext.toLowerCase() == 'gif' || res.ext.toLowerCase()=='svg'){
+								$('#content').summernote('insertImage', res.fileUrl);
+							}else{
+								$('#content').summernote('createLink', {
+									text: res.orFileName,
+									url: res.fileUrl,
+									isNewWindow: true
+								});
+							}
 						}
 				    }else{
 				    	alert("파일 업로드에 실패했습니다." + res.error);
@@ -86,23 +122,25 @@
 				error: function(){
 					alert("문제가 발생했습니다.");
 				}
-			})
-		 }else{
-			 alert("change론 안되지롱");
-		 }
-		 
+			});
+	    }
+	 
+	 
+	 $(document).on('click', '.delete-file', function(e){
+		e.preventDefault();
+		//url 가져오기
+		const fileUrl = $(this).siblings('a').attr('href');
+		
+		$("img[src='"+fileUrl+"']").hide();
+		$(this).closest('.upload-file').hide();
 	 });
+	 
   });
 </script>
-<div class="p-5 m-5">
-<c:choose>
-  <c:when test="${adminBbs.fgrade > 0}">
-     <form class="row" action="/comunity/bbs/writefile" method="post"  enctype="multipart/form-data">
-  </c:when>
-  <c:otherwise>
-     <form class="row" action="/comunity/bbs/write" method="post">
-  </c:otherwise> 
-</c:choose>  
+<div class="p-5 my-3 bg-white shadow-sm rounded">
+
+ <form class="row" action="/comunity/bbs/write" method="post">
+
   <c:if test="${adminBbs.category > 0}">
     <label class="col-2 text-right py-3 my-3">
        카테고리

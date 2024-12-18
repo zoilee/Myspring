@@ -25,7 +25,7 @@
 	</bean>        
     
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    	<property name="basePackage" value="com.zoile.kdtcom.dao"/>
+    	<property name="basePackage" value="com.zoile.kdtcom.controller.dao"/>
     	<property name="sqlSessionFactory" ref="sqlSessionFactory"/>
     </bean>
     

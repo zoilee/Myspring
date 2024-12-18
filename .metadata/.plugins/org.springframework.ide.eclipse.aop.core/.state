@@ -2,5 +2,6 @@
 <aop-reference-model>
 <aop-project name="simpleCRUD"/>
 <aop-project name="comunity"/>
+<aop-project name="firebase"/>
 <aop-project name="kdtcom"/>
 </aop-reference-model>
